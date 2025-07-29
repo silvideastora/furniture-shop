@@ -5,6 +5,7 @@ import type { Banner } from "../../../types";
 
 const useBanners = () => {
   const { ref, isLoading } = useAPI();
+
   const [banners, setBanner] = useState<Array<Banner>>([]);
   const [loading, setLoading] = useState<boolean>(true);
 

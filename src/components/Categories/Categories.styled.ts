@@ -14,6 +14,11 @@ export const CardContainer = styled.div`
 `;
 
 export const Card = styled.div`
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.03);
+  }
   .banner {
     width: 100%;
     height: 100%;

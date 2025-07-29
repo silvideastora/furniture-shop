@@ -113,3 +113,39 @@ export type CategoryResponse = {
   version: string;
   license: string;
 };
+//Types para los productos
+
+export type Product = {
+  id: string;
+  uid: string | null;
+  url: string | null;
+  link: string;
+  type: string;
+  href: string;
+  tags: Array<string>;
+  first_publication_date: string | null;
+  last_publication_date: string | null;
+  slugs: Array<string>;
+  linked_documents: Array<string>;
+  lang: string;
+  alternate_languages: Array<string>;
+  data: ProductData;
+};
+
+export type ProductData = {
+  name: string;
+  sku: string;
+  category: Category;
+  mainimage: MainImage;
+  short_description: string;
+  description: Array<Description>;
+  specs: Array<Spec>;
+  images: Array<MainImage>;
+  stock: number;
+  price: number;
+};
+
+export type Spec = {
+  spec_name: string;
+  spec_value: string;
+};
