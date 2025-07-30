@@ -4,6 +4,8 @@ export const ProductsWrapper = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 16px;
+  flex-direction: column;
+  text-align: center;
 `;
 export const GridContainer = styled.div`
   display: grid;
@@ -32,32 +34,11 @@ export const CardP = styled.div`
   }
 `;
 
-export const CardContainer = styled.div`
-  display: flex;
-  img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    border-radius: 4px;
-  }
-  a {
-    text-decoration: none;
-    color: slateblue;
-    font-size: 20px;
-  }
-`;
-
 export const CardText = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: column;
-
-  .items div {
-    display: grid;
-    grid-template-rows: 50px 50px;
-  }
 
   .prod-name {
     display: flex;
@@ -66,31 +47,6 @@ export const CardText = styled.div`
     color: dimgray;
     font-weight: 400;
     justify-content: center;
-  }
-
-  .price {
-    display: block;
-    font-size: 26px;
-    color: black;
-    margin: 0 40px;
-  }
-  .slug {
-    margin-left: 40px;
-    position: absolute;
-    display: flex;
-  }
-  .add-to-cart {
-    max-width: 120px;
-    max-height: 100px;
-    display: flex;
-    background-color: slateblue;
-    border: 0;
-    color: white;
-    border-radius: 10px;
-    margin: 0 150px;
-    padding: 2px;
-    position: absolute;
-    cursor: pointer;
   }
 `;
 export const Price = styled.span`
@@ -103,24 +59,29 @@ export const ProductName = styled.p`
   color: #333333;
   margin: 0;
 `;
+
 export const Button = styled.button`
-  display: grid;
-  align-items: center;
-  justify-content: center;
+  margin: 2rem auto 0;
+  display: block;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  color: gray;
+  border-radius: 6px;
+  cursor: pointer;
   max-width: 260px;
   min-width: 192px;
   height: 60px;
-  background: gray;
-  color: white;
-  font-size: 16px;
   border: none;
+  font-size: 16px;
   cursor: pointer;
-  transition: 0.2s ease all;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  margin-top: 30px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 
-  :hover {
-    box-shadow: 0 0 40px 40px slateblue inset;
+  &:hover {
+    background-color: pink;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.98);
   }
 `;

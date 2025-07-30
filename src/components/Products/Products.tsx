@@ -1,4 +1,5 @@
 import {
+  Button,
   CardP,
   CardText,
   GridContainer,
@@ -33,6 +34,7 @@ const Products = () => {
           ))}
         </GridContainer>
       )}
+      <Button>View more products</Button>
     </ProductsWrapper>
   );
 };
