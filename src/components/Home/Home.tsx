@@ -10,6 +10,9 @@ export default function Home() {
       <Slideshow />
       <Categories />
       <Products />
+      <Link to="/products">
+        <Button className="btn-container">View all products</Button>
+      </Link>
     </>
   );
 }
